@@ -8,45 +8,66 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
+        path: 'the-map',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../tab1/tab1.module').then(m => m.Tab1PageModule)
+              import('../the-map/the-map.module').then(m => m.TheMapPageModule)
           }
         ]
       },
       {
-        path: 'tab2',
+        path: 'bookings',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+              import('../bookings/bookings.module').then(m => m.BookingsPageModule)
           }
         ]
       },
       {
-        path: 'tab3',
+        path: 'profile',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+              import('../profile/profile.module').then(m => m.ProfilePageModule)
+          }
+        ]
+      },
+      {
+        path: 'analytics',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../analytics/analytics.module').then(m => m.AnalyticsPageModule)
+          }
+        ]
+      },
+      {
+        path: 'info',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../info/info.module').then(m => m.InfoPageModule)
           }
         ]
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/the-map',
         pathMatch: 'full'
       }
     ]
   },
+  
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/the-map',
     pathMatch: 'full'
   }
 ];

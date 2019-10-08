@@ -1,0 +1,34 @@
+
+<ion-content>
+  <div #list [ngClass]="{'list': display, 'listinactive': !display}">
+    <div (click)="swipeUp()" class="toggler">
+      <ion-icon *ngIf="display" color="dark" class="arrow" name="arrow-dropdown"></ion-icon>
+      <ion-icon *ngIf="!display" class="arrow" name="arrow-dropup"></ion-icon>
+      <p *ngIf="!display" color="dark">REQUESTS</p>
+    </div>
+    <div class="s-list">
+      <div class="card" >
+        <div class="image">
+
+          <img 
+            src="../../assets/shapes.svg" alt="">
+
+          <img src="../../assets/shapes.svg" alt="No image">
+
+        </div>
+        <div class="details">
+          <p style="color: black">Samuel L Jackson</p>
+          <p style="color: black">Dippenaar St, Diepkloof Zone, Johannesburg</p>
+        </div>
+
+
+        <div class="call">
+          <button expand="full" (click)="Decline(data.docid, i)">Decline</button>
+        </div>
+        <div class="request">
+          <button expand="full" (click)="Accept(data, i, data.docid)">Accept</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

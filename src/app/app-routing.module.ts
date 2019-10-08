@@ -5,7 +5,12 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  }
+  },
+  { path: 'the-map', loadChildren: './the-map/the-map.module#TheMapPageModule' },
+  { path: 'analytics', loadChildren: './analytics/analytics.module#AnalyticsPageModule' },
+  { path: 'profile', loadChildren: './profile/profile.module#ProfilePageModule' },
+  { path: 'bookings', loadChildren: './bookings/bookings.module#BookingsPageModule' },
+  { path: 'info', loadChildren: './info/info.module#InfoPageModule' }
 ];
 @NgModule({
   imports: [
