@@ -98,8 +98,8 @@
             align-items: center;
             
             ion-avatar{
-                height: 90px;
-                width: 90px;
+                height: 25vw;
+                width: 25vw;
             }
             img {
                 // border-radius: 50%;
@@ -114,16 +114,14 @@
             flex-direction: column;
             
             .name{
-                height: 65%;
+                height: 100%;
                 display: flex;
                 align-items: center;
                 position: relative;
                 padding: 0;
                 p {
-                    font-size: 20px;
+                    font-size: 5vw;
                     color: white;
-                    position: absolute;
-                    bottom: 0;
                 }
             }
             .todo{
@@ -184,12 +182,14 @@
 }
 
 .graph {
-    height: 80%;
+    height: 55%;
     // background:linear-gradient(rgba(255, 255, 255, 0.925)),url(../../assets/coverbg.jpg);
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    // border: 1px solid red;
+
     .welcome-card {
         position: absolute;
         top: 0;
@@ -197,4 +197,38 @@
         left: 0;
     }
 
+}
+.contra{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .rej{
+        padding-left: 1vw;
+        width: 60%;
+        margin-bottom: 1vw;
+        box-shadow: 1px 1px 1px 1px rgba(59, 59, 59, 0.4);
+        border-radius: 5px;
+        text-emphasis: center;
+        text-align: center;
+        background: #FF0000;
+        color: white;
+        a{
+            font-size: 7vw;
+            font-weight: bold;
+            color: white;
+        }
+    }
+    .acc{
+        width: 60%;
+        padding-left: 1vw;
+        box-shadow: 1px 1px 1px 1px rgba(59, 59, 59, 0.4);
+        border-radius: 5px;
+        text-align: center;
+        // background: 
+        a{
+            font-size: 7vw;
+            font-weight: bold;
+        }
+    }
 }
